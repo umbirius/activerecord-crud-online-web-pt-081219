@@ -20,10 +20,7 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.new
-  attributes.each {|key, value| movie.send("#{key}=", value)}
-  movie.save
-  
+  movie = Movie.create(attributes)
   
 end
 
